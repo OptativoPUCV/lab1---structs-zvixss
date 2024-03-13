@@ -104,3 +104,17 @@ exercises.c:52:30: error: statement with no effect [-Werror=unused-value]
 cc1: all warnings being treated as errors
 Compilation failed
 c4ee872
+Wed 13 Mar 2024 09:10:16 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:52:30: error: statement with no effect [-Werror=unused-value]
+   52 |         if (arrPares == NULL)(EXIT_FAILURE);
+      |                              ^
+exercises.c:51:33: error: ‘arrPares’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   51 |         int *arrPares = (int *) realloc(arrPares, *newSize * sizeof(int));
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0194213
