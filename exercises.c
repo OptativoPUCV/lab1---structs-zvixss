@@ -48,6 +48,10 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
       {
         arrPares[i] = arr[i];
       }
+      else
+      {
+        arrPares[i] = 0;
+      }
     }
   return arrPares;
 }
