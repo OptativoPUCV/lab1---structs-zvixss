@@ -42,15 +42,15 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
 {
   int *arrPares = NULL;
   *newSize = 0;
+
+  int *arrPares = (int *) realloc(arrPares, *newSize * sizeof(int));
+  if (arrPares == NULL)(EXIT_FAILURE);
   
   for (int i = 0; i < size; i++)
     {
       if(arr[i] % 2 == 0)
       {
         (*newSize)++;
-        int *arrPares = (int *) realloc(arrPares, *newSize * sizeof(int));
-        if (arrPares == NULL)(EXIT_FAILURE);
-        
         arrPares[*newSize - 1] = arr[i];
        
       }
