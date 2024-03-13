@@ -52,8 +52,9 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
       {
         arrPares[i] = 0;
       }
+
+      if (i == size - 1) return arrPares;
     }
-  return arrPares;
 }
 
 /*
