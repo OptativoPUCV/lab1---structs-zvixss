@@ -40,11 +40,11 @@ los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) 
 {
-  int *arrPares = NULL;
-  *newSize = 0;
 
   int *arrPares = (int *) realloc(arrPares, *newSize * sizeof(int));
   if (arrPares == NULL)(EXIT_FAILURE);
+
+  *newSize = 0;
   
   for (int i = 0; i < size; i++)
     {
