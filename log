@@ -64,3 +64,26 @@ exercises.c:58:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 958286f
+Wed 13 Mar 2024 09:06:26 PM UTC: 
+ exercises.c | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:44:8: error: ‘newSize’ redeclared as different kind of symbol
+   44 |   int *newSize = 0;
+      |        ^~~~~~~
+exercises.c:41:50: note: previous definition of ‘newSize’ with type ‘int *’
+   41 | int *filterEvenNumbers(int arr[], int size, int *newSize)
+      |                                             ~~~~~^~~~~~~
+exercises.c:52:30: error: statement with no effect [-Werror=unused-value]
+   52 |         if (arrPares == NULL)(EXIT_FAILURE);
+      |                              ^
+exercises.c:43:8: error: unused variable ‘arrPares’ [-Werror=unused-variable]
+   43 |   int *arrPares = NULL;
+      |        ^~~~~~~~
+exercises.c:58:1: error: control reaches end of non-void function [-Werror=return-type]
+   58 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+5bd295e
