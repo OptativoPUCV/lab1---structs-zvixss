@@ -219,3 +219,20 @@ exercises.c:70:23: error: ‘arr3’ is used uninitialized [-Werror=uninitialize
 cc1: all warnings being treated as errors
 Compilation failed
 b28026e
+Thu 14 Mar 2024 12:15:59 AM UTC: 
+ exercises.c | 3 ---
+ 1 file changed, 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:46:24: error: statement with no effect [-Werror=unused-value]
+   46 |   if (arrPares == NULL)(EXIT_FAILURE);
+      |                        ^
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:77:9: error: ‘arr3’ undeclared (first use in this function); did you mean ‘arr2’?
+   77 |         arr3[i] = arr1[i];
+      |         ^~~~
+      |         arr2
+exercises.c:77:9: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+c6d4f45
