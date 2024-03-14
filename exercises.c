@@ -30,6 +30,7 @@ invierta el orden de sus elementos.
 void reverseArray(int arr[], int size) 
 {
   
+  
 }
 
 /*
@@ -52,7 +53,6 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
       {
         (*newSize)++;
         arrPares[*newSize - 1] = arr[i];
-       
       }
     }
   return arrPares;
@@ -64,8 +64,25 @@ Descripción: Escribe una función que tome dos arreglos
 ordenados y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado.
 */
-void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
-                       int result[]) {}
+void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]) 
+{
+  int *size3 = 0;
+  int *arr3 = (int *) realloc(arr3, *size3 * sizeof(int));
+  if (arr3 == NULL)(EXIT_FAILURE);
+
+  int tallaMayor = 0;
+  if (size1 > size2) tallaMayor = size1;
+  else tallaMayor = size2;
+
+  for (int i = 0; i < tallaMayor; i++)
+    {
+      if (arr1[i] < arr2[i])
+      {
+        arr3[i] = arr1[i];
+      }
+    }
+  return arr3;  
+}
 
 /*
 Ejercicio 5: Comprobación de Ordenación
