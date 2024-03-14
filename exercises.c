@@ -68,7 +68,6 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]
 {
   int *size3 = 0;
   int *arr3 = (int *) realloc(arr3, *size3 * sizeof(int));
-  if (arr3 == NULL)(EXIT_FAILURE);
 
   int tallaMayor = 0;
   if (size1 > size2) tallaMayor = size1;
