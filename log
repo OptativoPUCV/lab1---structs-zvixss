@@ -250,3 +250,14 @@ exercises.c:45:27: error: ‘arrPares’ is used uninitialized [-Werror=uninitia
 cc1: all warnings being treated as errors
 Compilation failed
 d36dace
+Thu 14 Mar 2024 12:31:17 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+test.c: In function ‘filterEvenNumbers’:
+exercises.c:45:27: error: ‘arrPares’ is used uninitialized [-Werror=uninitialized]
+   45 |   int *arrPares = (int *) realloc(arrPares, *newSize * sizeof(int));
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4d87406
