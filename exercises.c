@@ -54,24 +54,30 @@ arreglos en un tercer arreglo también ordenado.
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]) 
 {
   int nuevaTalla = size1 + size2;
-    for (int i = 0; i < nuevaTalla; i++)
-      {
-        if (i < size1) result[i] = arr1[i];
-        else result[i] = arr2[i - size1];
-      }
 
-    //Uso un BubbleSort acá porque el profesor me dijo que no se puede usar qsort.
-    for (int i = 0; i < nuevaTalla - 1; i++) 
+  for (int i = 0; i < nuevaTalla; i++)
     {
-      for (int j = 0; j < nuevaTalla - i - 1; j++) 
+      if(i < size1)
       {
-        if (result[j] > result[j + 1]) 
-        {
-          int temp = result[j];
-          result[j] = result[j + 1];
-          result[j + 1] = temp;
-        }
+        result[i] = arr1[i];
       }
+      else
+      {
+        result[i] = arr2[i - size1];
+      }
+    }
+
+  for (int i = 0; i < nuevaTalla - 1; i++)
+    {
+      for (int j = 0; j < nuevaTalla - i - 1; j++)
+        {
+          if (result[j] > result[j + 1])
+          {
+            int aux = result[j];
+            result[j] = result[j + 1];
+            result[j + 1] = aux;
+          }
+        }
     }
 }
 
