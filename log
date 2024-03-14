@@ -178,3 +178,26 @@ exercises.c:70:23: error: ‘arr3’ is used uninitialized [-Werror=uninitialize
 cc1: all warnings being treated as errors
 Compilation failed
 8b1a4e1
+Thu 14 Mar 2024 12:15:32 AM UTC: 
+ exercises.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:46:24: error: statement with no effect [-Werror=unused-value]
+   46 |   if (arrPares == NULL)(EXIT_FAILURE);
+      |                        ^
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:71:20: error: statement with no effect [-Werror=unused-value]
+   71 |   if (arr3 == NULL)(EXIT_FAILURE);
+      |                    ^
+test.c: In function ‘filterEvenNumbers’:
+exercises.c:45:27: error: ‘arrPares’ is used uninitialized [-Werror=uninitialized]
+   45 |   int *arrPares = (int *) realloc(arrPares, *newSize * sizeof(int));
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test.c: In function ‘mergeSortedArrays’:
+exercises.c:70:23: error: ‘arr3’ is used uninitialized [-Werror=uninitialized]
+   70 |   int *arr3 = (int *) realloc(arr3, *size3 * sizeof(int));
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a9bc4c3
