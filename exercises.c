@@ -5,7 +5,7 @@
 #include <string.h>
 
 /*
-Ejercicio 1: Encuentra el Elemento Mayor
+Ejercicio 1: Encuentra e  l Elemento Mayor
 Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y devuelva el valor más grande del arreglo.
 */
@@ -43,7 +43,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
 {
   int *arrPares = NULL;
 
-  *arrPares = (int *) realloc(arrPares, *newSize * sizeof(int));
+  *arrPares = (int *) realloc(arrPares, *newSize * sizeof(int *));
   if (arrPares == NULL) exit(EXIT_FAILURE);
 
   *newSize = 0;
