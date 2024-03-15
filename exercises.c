@@ -11,6 +11,7 @@ y su tamaño, y devuelva el valor más grande del arreglo.
 */
 int findMax(int arr[], int size) 
 {
+  //Creo una variable para guardar el valor maximo
   int almacenarMayor = arr[0];
   for (int i = 0; i < size; i++)
     {
@@ -95,14 +96,16 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 */
 int checkSorted(int arr[], int size) 
 { 
+  //Inicializo las variables en verdadero
   int ascendente = 1; int descendente = 1;
 
   for(int i = 0; i < size - 1; i++)
     {
+      //En caso de no cumplir, se cambia el valor de las variables a falso
       if(arr[i] > arr[i + 1]) ascendente = 0;
       else if(arr[i] < arr[i + 1]) descendente = 0;
     }
-
+  
   if (ascendente) return 1;
   else if (descendente) return -1;
   else return 0;
@@ -130,8 +133,10 @@ typedef struct {
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
                       int anioNacimiento, int anioPublicacion) 
 {
+  //Copio los strings
   strcpy(libro->titulo, titulo);
   strcpy(libro->autor.nombre, nombreAutor);
+  //Copio los int
   libro->autor.anioNacimiento = anioNacimiento;
   libro->anioPublicacion = anioPublicacion; 
 }
