@@ -488,3 +488,16 @@ exercises.c:52:12: error: assignment to ‘int *’ from ‘int’ makes pointer
 cc1: all warnings being treated as errors
 Compilation failed
 29a986f
+Sat 16 Mar 2024 05:33:03 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:52:8: error: redefinition of ‘arrPares’
+   52 |   int *arrPares = (int *) realloc(arrPares, (* newSize) * sizeof(int *));
+      |        ^~~~~~~~
+exercises.c:50:8: note: previous definition of ‘arrPares’ with type ‘int *’
+   50 |   int *arrPares = NULL;
+      |        ^~~~~~~~
+Compilation failed
+608964b
