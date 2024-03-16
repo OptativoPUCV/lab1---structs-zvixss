@@ -173,11 +173,11 @@ Nodo *crearListaEnlazada(int arr[], int size)
 
       Nodo *aux = listaNodo;
 
-      while (temp->siguiente != NULL)
+      while (aux->siguiente != NULL)
         {
-          temp = temp->siguiente;
+          aux = aux->siguiente;
         }
-      temp->siguiente = aux;
+      aux->siguiente = temp;
     }
   return listaNodo;
 }
