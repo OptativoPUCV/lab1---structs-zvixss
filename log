@@ -429,3 +429,15 @@ Fri 15 Mar 2024 12:32:32 AM UTC:
  tests:  0|2
 total_score: 50/70
 af13565
+Sat 16 Mar 2024 05:10:35 PM UTC: 
+ exercises.c | 25 ++++++++++++++++++++++++-
+ 1 file changed, 24 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:170:7: error: ‘aux’ undeclared (first use in this function)
+  170 |       aux = (Nodo)malloc(sizeof(Nodo));
+      |       ^~~
+exercises.c:170:7: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:170:7: error: conversion to non-scalar type requested
+Compilation failed
+e0f14b8
