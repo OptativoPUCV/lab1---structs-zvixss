@@ -459,3 +459,32 @@ Sat 16 Mar 2024 05:28:19 PM UTC:
  tests:  0|1
 total_score: 60/70
 ab6950a
+Sat 16 Mar 2024 05:32:00 PM UTC: 
+ exercises.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:52:45: error: expected ‘)’ before ‘sizeof’
+   52 |   arrPares = (int) realloc(arrPares, newSize sizeof(int *));
+      |                           ~                 ^~~~~~~
+      |                                             )
+exercises.c:52:38: error: passing argument 2 of ‘realloc’ makes integer from pointer without a cast [-Werror=int-conversion]
+   52 |   arrPares = (int) realloc(arrPares, newSize sizeof(int *));
+      |                                      ^~~~~~~
+      |                                      |
+      |                                      int *
+In file included from exercises.c:4,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:551:43: note: expected ‘size_t’ {aka ‘long unsigned int’} but argument is of type ‘int *’
+  551 | extern void *realloc (void *__ptr, size_t __size)
+      |                                    ~~~~~~~^~~~~~
+In file included from test.c:1:
+exercises.c:52:14: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+   52 |   arrPares = (int) realloc(arrPares, newSize sizeof(int *));
+      |              ^
+exercises.c:52:12: error: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   52 |   arrPares = (int) realloc(arrPares, newSize sizeof(int *));
+      |            ^
+cc1: all warnings being treated as errors
+Compilation failed
+29a986f
