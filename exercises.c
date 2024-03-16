@@ -165,7 +165,7 @@ Nodo *crearListaEnlazada(int arr[], int size)
   listaNodo->numero = arr[0];
   listaNodo->siguiente = NULL;
 
-  for (int i = 0; i < size - 1; i++)
+  for (int i = 1; i < size; i++)
     {
       temp = (Nodo *)malloc(sizeof(Nodo));
       temp->numero = arr[i];
