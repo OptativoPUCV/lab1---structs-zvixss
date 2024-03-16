@@ -518,3 +518,22 @@ Sat 16 Mar 2024 05:34:44 PM UTC:
  tests:  0|1
 total_score: 60/70
 9db48ec
+Sat 16 Mar 2024 05:35:17 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:53:3: error: unknown type name ‘n’
+   53 |   n*ewSize = 0;
+      |   ^
+exercises.c:53:5: error: unused variable ‘ewSize’ [-Werror=unused-variable]
+   53 |   n*ewSize = 0;
+      |     ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+Sat 16 Mar 2024 05:35:24 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+total_score: 70/70
+5e4a49a
